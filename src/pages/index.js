@@ -1,12 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
 import styled, { css } from "styled-components";
-import { Flex, Box } from "grid-styled";
 import Background from "../components/Background";
 import Layout from "../components/Layout";
 import TypeText from "../components/TypeText";
 import Technologies from "../components/Technologies";
-import ContactForm from "../components/ContactForm";
 
 import media from "../utils/style";
 
@@ -46,14 +44,6 @@ const IndexPage = ({ data }) => (
     <Section id="technologies">
       <SectionTitle>Favorite Tech I've Worked With</SectionTitle>
       <Technologies edges={data.allLogos.edges} />
-    </Section>
-    <Section id="contact" dark>
-      <SectionTitle>Contact</SectionTitle>
-      <Flex alignItems="center" flexDirection="column">
-        <Box px={2} width={[1, 1 / 2]}>
-          <ContactForm />
-        </Box>
-      </Flex>
     </Section>
   </Layout>
 );
