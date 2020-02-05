@@ -5,6 +5,7 @@
   "author": "Ethan Fann <ethan@ethanfann.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.9.2",
+    "fetch-ponyfill": "^6.1.0",
     "gatsby": "^2.0.64",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.5",
@@ -27,8 +28,7 @@
     "styled-reset": "^1.6.1",
     "typeface-open-sans": "^0.0.54",
     "typeface-pacifico": "^0.0.54",
-    "typeface-raleway": "^0.0.54",
-    "whatwg-fetch": "^3.0.0"
+    "typeface-raleway": "^0.0.54"
   },
   "keywords": [
     "gatsby"

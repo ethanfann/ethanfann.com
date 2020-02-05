@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import "whatwg-fetch"; // Fetch Polyfill
+import "fetch-ponyfill"; // Fetch Polyfill
 
 const Form = styled.form``;
 
