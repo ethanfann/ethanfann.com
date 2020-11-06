@@ -20,14 +20,14 @@ const StyledTypist = styled(Typist)`
   `}
 `;
 
-const TypeText = props => {
+const TypeText = (props) => {
   const { text } = props;
   const typistStrings = {
     First: "Build Responsive Web Apps",
     Second: "Integrate APIs",
-    Third: "Provide Top Tier Application Support",
+    Third: "Provide Top Tier Technical Support",
     Fourth: "Love to Ride Bikes",
-    Fifth: "Want People To Have Delightful Experiences with Technology"
+    Fifth: "Want To Help People Enjoy Their Technology",
   };
   if (text) {
     return (
