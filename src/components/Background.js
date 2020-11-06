@@ -29,19 +29,10 @@ const BgImage = styled(Image)`
   left: 0;
   width: 100%;
   z-index: -1;
-  height: ${props => props.height || "100vh"};
-
-  // Adjust image positioning (if image covers area with defined height) and add font-family for polyfill
-  & > img {
-    object-fit: ${props => props.fit || "cover"} !important;
-    object-position: ${props => props.position || "50% 50%"} !important;
-    font-family: 'object-fit: ${props =>
-      props.fit || "cover"} !important; object-position: ${props =>
-  props.position || "50% 50%"} !important;'
-  }
+  height: ${(props) => props.height || "85vh"};
 `;
 
-const Background = props => {
+const Background = (props) => {
   const { children, fluid } = props;
   return (
     <Container>
