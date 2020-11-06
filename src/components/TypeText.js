@@ -27,7 +27,7 @@ const TypeText = (props) => {
     Second: "Integrate APIs",
     Third: "Provide Top Tier Technical Support",
     Fourth: "Love to Ride Bikes",
-    Fifth: "Want To Help People Enjoy Their Technology",
+    Fifth: "Want to Provide Delightful Tech Experiences",
   };
   if (text) {
     return (
