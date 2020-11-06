@@ -12,7 +12,7 @@ const Section = styled.div`
   text-align: center;
   padding-top: 45px;
   padding-bottom: 40px;
-  ${props =>
+  ${(props) =>
     props.dark &&
     css`
       background: #292929;
@@ -36,11 +36,25 @@ const SectionTitle = styled.h2`
   `}
 `;
 
+const Img = styled.img`
+  max-width: 80%;
+`;
+
 const IndexPage = ({ data }) => (
   <Layout>
     <Background fluid={data.hero.edges[0].node.fluid}>
       <TypeText />
     </Background>
+    <Section id="latestProject">
+      <SectionTitle>Covid-19 Mini-Project</SectionTitle>
+      <p>
+        A simple ride activity logger built with Ruby on Rails, React +
+        Typescript, and GraphQL.
+      </p>
+      <a href="https://github.com/ethanfann/avarts">
+        <Img src="https://i.imgur.com/hWhY3Yv.gif" alt="project demo gif" />
+      </a>
+    </Section>
     <Section id="technologies">
       <SectionTitle>Favorite Tech I've Worked With</SectionTitle>
       <Technologies edges={data.allLogos.edges} />
