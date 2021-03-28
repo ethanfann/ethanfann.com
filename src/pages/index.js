@@ -5,9 +5,7 @@ import Background from "../components/Background";
 import Layout from "../components/Layout";
 import TypeText from "../components/TypeText";
 import Technologies from "../components/Technologies";
-import ReactCompareImage from "react-compare-image";
-import leftImage from "../images/light.png";
-import rightImage from "../images/dark.png";
+import Compare from "../components/Compare";
 
 import media from "../utils/style";
 
@@ -51,16 +49,14 @@ const IndexPage = ({ data }) => (
           target="_blank"
           rel="noreferrer"
         >
-          latest Project
+          Latest Project
         </a>
       </SectionTitle>
       <p>
         A personal ride activity logger built with Ruby on Rails, React +
         Typescript, and GraphQL. Dark mode included.
       </p>
-      <div style={{ maxWidth: "60%", margin: "auto" }}>
-        <ReactCompareImage leftImage={leftImage} rightImage={rightImage} />
-      </div>
+      <Compare edges={data.comparison.edges} />
     </Section>
     <Section id="technologies">
       <SectionTitle>Favorite Tech I've Worked With</SectionTitle>
@@ -94,6 +90,18 @@ export const pageQuery = graphql`
           id
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    comparison: allImageSharp(
+      filter: { original: { src: { regex: "/comparison/" } } }
+    ) {
+      edges {
+        node {
+          id
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
