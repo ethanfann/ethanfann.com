@@ -5,6 +5,9 @@ import Background from "../components/Background";
 import Layout from "../components/Layout";
 import TypeText from "../components/TypeText";
 import Technologies from "../components/Technologies";
+import ReactCompareImage from "react-compare-image";
+import leftImage from "../images/light.png";
+import rightImage from "../images/dark.png";
 
 import media from "../utils/style";
 
@@ -36,24 +39,24 @@ const SectionTitle = styled.h2`
   `}
 `;
 
-const Img = styled.img`
-  max-width: 80%;
-`;
-
 const IndexPage = ({ data }) => (
   <Layout>
     <Background fluid={data.hero.edges[0].node.fluid}>
       <TypeText />
     </Background>
     <Section id="latestProject">
-      <SectionTitle>Covid-19 Mini-Project</SectionTitle>
+      <SectionTitle>
+        <a href="https://github.com/ethanfann/avarts" target="_blank">
+          latest Project
+        </a>
+      </SectionTitle>
       <p>
-        A simple ride activity logger built with Ruby on Rails, React +
-        Typescript, and GraphQL.
+        A personal ride activity logger built with Ruby on Rails, React +
+        Typescript, and GraphQL. Dark mode included.
       </p>
-      <a href="https://github.com/ethanfann/avarts">
-        <Img src="https://i.imgur.com/hWhY3Yv.gif" alt="project demo gif" />
-      </a>
+      <div style={{ maxWidth: "60%", margin: "auto" }}>
+        <ReactCompareImage leftImage={leftImage} rightImage={rightImage} />
+      </div>
     </Section>
     <Section id="technologies">
       <SectionTitle>Favorite Tech I've Worked With</SectionTitle>
