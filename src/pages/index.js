@@ -46,7 +46,11 @@ const IndexPage = ({ data }) => (
     </Background>
     <Section id="latestProject">
       <SectionTitle>
-        <a href="https://github.com/ethanfann/avarts" target="_blank">
+        <a
+          href="https://github.com/ethanfann/avarts"
+          target="_blank"
+          rel="noreferrer"
+        >
           latest Project
         </a>
       </SectionTitle>
