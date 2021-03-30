@@ -83,7 +83,7 @@ const Layout = ({ children, noMenu }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Body>
           <GlobalStyle />
@@ -96,9 +96,7 @@ const Layout = ({ children, noMenu }) => (
           </Helmet>
           <Navbar noMenu={noMenu} edges={data.allSocialJson.edges} />
           {children}
-          <Footer>
-            ethanfann.com
-          </Footer>
+          <Footer>ethanfann.com</Footer>
         </Body>
       </>
     )}

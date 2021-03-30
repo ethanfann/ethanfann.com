@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Flex, Box } from "grid-styled";
 import Link from "./Link";
-import { Strava as StravaIcon } from "styled-icons/fa-brands/Strava.cjs";
-import { LinkedinIn as LinkedinIcon } from "styled-icons/fa-brands/LinkedinIn.cjs";
-import { Github as GithubIcon } from "styled-icons/fa-brands/Github.cjs";
+import { Strava as StravaIcon } from "@styled-icons/fa-brands/Strava";
+import { LinkedinIn as LinkedinIcon } from "@styled-icons/fa-brands/LinkedinIn";
+import { Github as GithubIcon } from "@styled-icons/fa-brands/Github";
 
 import Name from "./Name";
 
