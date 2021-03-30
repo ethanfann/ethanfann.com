@@ -69,9 +69,9 @@ const MenuItem = styled(ButtonLink)`
 
 function Header(props) {
   const { noMenu, edges } = props;
-  const linkedin = edges.find(o => o.node.type === "linkedin");
-  const github = edges.find(o => o.node.type === "github");
-  const strava = edges.find(o => o.node.type === "strava");
+  const linkedin = edges.find((o) => o.node.type === "linkedin");
+  const github = edges.find((o) => o.node.type === "github");
+  const strava = edges.find((o) => o.node.type === "strava");
 
   return (
     <Base>
@@ -83,22 +83,34 @@ function Header(props) {
           <MenuBox px={2} width={[0, 2 / 3, 4 / 6]}>
             <ul>
               <li>
-                <MenuItem>
-                  <Link aria-label={linkedin.node.type} to={linkedin.node.url}>
+                <MenuItem aria-label={linkedin.node.type}>
+                  <Link
+                    aria-label={linkedin.node.type}
+                    to={linkedin.node.url}
+                    label={linkedin.node.type}
+                  >
                     <LinkedinIcon />
                   </Link>
                 </MenuItem>
               </li>
               <li>
-                <MenuItem>
-                  <Link aria-label={github.node.type} to={github.node.url}>
+                <MenuItem aria-label={github.node.type}>
+                  <Link
+                    aria-label={github.node.type}
+                    to={github.node.url}
+                    label={github.node.type}
+                  >
                     <GithubIcon />
                   </Link>
                 </MenuItem>
               </li>
               <li>
-                <MenuItem>
-                  <Link aria-label={strava.node.type} to={strava.node.url}>
+                <MenuItem aria-label={strava.node.type}>
+                  <Link
+                    aria-label={strava.node.type}
+                    to={strava.node.url}
+                    label={strava.node.type}
+                  >
                     <StravaIcon />
                   </Link>
                 </MenuItem>

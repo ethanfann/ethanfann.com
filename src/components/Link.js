@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link as GatsbyLink } from 'gatsby';
+import React from "react";
+import { Link as GatsbyLink } from "gatsby";
 
-const Link = ({ children, to }) => {
+const Link = ({ children, to, label }) => {
   // Tailor the following test to your environment.
   // This example assumes that any internal link (intended for Gatsby)
   // will start with exactly one slash, and that anything else is external.
@@ -12,7 +12,7 @@ const Link = ({ children, to }) => {
     return <GatsbyLink to={to}>{children}</GatsbyLink>;
   }
   return (
-    <a href={to} target="_blank" rel="noopener noreferrer">
+    <a href={to} target="_blank" rel="noopener noreferrer" aria-label={label}>
       {children}
     </a>
   );
