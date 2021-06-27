@@ -38,7 +38,7 @@ const SectionTitle = styled.h2`
 `;
 
 const Img = styled.img`
-  max-width: 50%;
+  max-width: 90%;
 `;
 
 const IndexPage = ({ data }) => (
@@ -57,30 +57,32 @@ const IndexPage = ({ data }) => (
         </a>
       </SectionTitle>
       <p>
-        A personal ride activity logger built with Ruby on Rails, React +
+        A personal cycling activity logger built with Ruby on Rails, React +
         Typescript, and GraphQL. Dark mode included.
       </p>
       <Compare edges={data.comparison.edges} />
     </Section>
     <Section>
-      <SectionTitle>Slackmojis Downloader CLI</SectionTitle>
+      <SectionTitle>
+        <a
+          href="https://github.com/ethanfann/slackmojis-downloader"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Slackmojis Downloader CLI
+        </a>
+      </SectionTitle>
       <p>
         The best way to download emojis from{" "}
         <a href="https://slackmojis.com" target="_blank">
           slackmojis.com
         </a>
       </p>
-      <a
-        href="https://github.com/ethanfann/slackmojis-downloader"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Img
-          size=""
-          src="https://raw.githubusercontent.com/ethanfann/slackmojis-downloader/master/media/demo.gif"
-          alt="slackmojis downloader gif"
-        />
-      </a>
+      <Img
+        size=""
+        src="https://raw.githubusercontent.com/ethanfann/slackmojis-downloader/master/media/demo.gif"
+        alt="slackmojis downloader gif"
+      />
     </Section>
     <Section id="technologies">
       <SectionTitle>Favorite Tech I've Worked With</SectionTitle>
