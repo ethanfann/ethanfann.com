@@ -38,7 +38,10 @@ const SectionTitle = styled.h2`
 `;
 
 const Img = styled.img`
-  max-width: 90%;
+  max-width: 60%;
+  ${media.xs`
+    max-width: 80%;
+  `}
 `;
 
 const IndexPage = ({ data }) => (
@@ -46,21 +49,21 @@ const IndexPage = ({ data }) => (
     <Background fluid={data.hero.edges[0].node.fluid}>
       <TypeText />
     </Background>
-    <Section id="latestProject">
+    <Section>
       <SectionTitle>
-        <a
-          href="https://github.com/ethanfann/avarts"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Latest Project
+        <a href="https://tangey.app" target="_blank" rel="noopener noreferrer">
+          Tangey
         </a>
       </SectionTitle>
       <p>
-        A personal cycling activity logger built with Ruby on Rails, React +
-        Typescript, and GraphQL. Dark mode included.
+        iOS application that provides home screen widgets for your latest Strava
+        activity.
       </p>
-      <Compare edges={data.comparison.edges} />
+      <Img
+        size=""
+        src={data.tangey.edges[0].node.fluid.src}
+        alt="tangey image"
+      />
     </Section>
     <Section>
       <SectionTitle>
@@ -73,16 +76,33 @@ const IndexPage = ({ data }) => (
         </a>
       </SectionTitle>
       <p>
-        The best way to download emojis from{" "}
-        <a href="https://slackmojis.com" target="_blank">
+        CLI application built with Ink.js that downloads emojis from{" "}
+        <a href="https://slackmojis.com" target="_blank" rel="noreferrer">
           slackmojis.com
         </a>
+        , one of the largest community-sourced repositories.{" "}
       </p>
       <Img
         size=""
-        src="https://raw.githubusercontent.com/ethanfann/slackmojis-downloader/master/media/demo.gif"
+        src="https://raw.githubusercontent.com/ethanfann/slackmojis-dl/main/media/demo.jpg"
         alt="slackmojis downloader gif"
       />
+    </Section>
+    <Section id="latestProject">
+      <SectionTitle>
+        <a
+          href="https://github.com/ethanfann/avarts"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Personal Cycling Activity Logger
+        </a>
+      </SectionTitle>
+      <p>
+        A personal cycling activity logger built with Ruby on Rails, React +
+        Typescript, and GraphQL. Dark mode included.
+      </p>
+      <Compare edges={data.comparison.edges} />
     </Section>
     <Section id="technologies">
       <SectionTitle>Favorite Tech I've Worked With</SectionTitle>
@@ -128,6 +148,19 @@ export const pageQuery = graphql`
           id
           fluid(maxWidth: 2560, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    tangey: allImageSharp(
+      filter: { original: { src: { regex: "/tangey/" } } }
+    ) {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
