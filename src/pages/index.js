@@ -68,7 +68,7 @@ const IndexPage = ({ data }) => (
     <Section>
       <SectionTitle>
         <a
-          href="https://github.com/ethanfann/slackmojis-downloader"
+          href="https://github.com/ethanfann/slackmojis-dl"
           target="_blank"
           rel="noopener noreferrer"
         >
