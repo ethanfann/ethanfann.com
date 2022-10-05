@@ -1,0 +1,13 @@
+{
+    "headers": [
+      {
+        "source": "https://cmp.osano.com/",
+        "headers": [
+          {
+            "key": "access-control-allow-origin",
+            "value": "*"
+          }
+        ]
+      }
+    ]
+  }
