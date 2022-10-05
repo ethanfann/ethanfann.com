@@ -34,6 +34,14 @@ module.exports = {
       }
     },
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-offline"
+    "gatsby-plugin-offline",
+    {
+      resolve: `gatsby-plugin-osano`,
+      options: {
+        customerId: '1t0AvyuRhBFceA1OUG',
+        ccid: '7e28edbe-b626-414e-ba2e-4d7e1d6939e1',
+        includeInDevelopment: false,
+      },
+    }
   ]
 };

@@ -6393,6 +6393,11 @@
     "lodash" "^4.17.21"
     "workbox-build" "^4.3.1"
 
+"gatsby-plugin-osano@^1.0.6":
+  "integrity" "sha512-L5LsrVRvYAHV3VpP/+bfjbizMoh4pSjN3W/GJqjZhiiS6Se+1jgqk4L5m5cLyfGATzFf9YO44wFIbjjAT5aa3A=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-osano/-/gatsby-plugin-osano-1.0.6.tgz"
+  "version" "1.0.6"
+
 "gatsby-plugin-page-creator@^3.8.0":
   "integrity" "sha512-6H+7+74f8rHay8V6EF80/ucDUREjaqCfrW5KSjAYxrc7uh8s5QNeumgNixQUAofnZQOCLTiyw1C3lOQnUVL4Xg=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-3.8.0.tgz"
