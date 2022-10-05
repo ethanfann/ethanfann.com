@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "https://cmp.osano.com/",
+      "source": "https://cmp-uat.osano.com/",
       "headers": [
         {
           "key": "access-control-allow-origin",
