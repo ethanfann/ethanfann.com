@@ -91,7 +91,7 @@ const Layout = ({ children, noMenu }) => (
             <html lang="en" />
             <meta
               name="description"
-              content="I am a IT + Software Engineer specializing in providing delightful experiences with technology."
+              content="I am Software Engineer specializing in providing delightful experiences with technology."
             />
           </Helmet>
           <Navbar noMenu={noMenu} edges={data.allSocialJson.edges} />
