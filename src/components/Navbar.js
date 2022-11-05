@@ -41,12 +41,6 @@ const Base = styled.div`
   }
 `;
 
-const MenuBox = styled(Box)`
-  ${media.xs`
-    display: none;
-  `}
-`;
-
 const NameBox = styled(Box)`
   ${media.xs`
     text-align:center;
@@ -80,7 +74,7 @@ function Header(props) {
           <Name />
         </NameBox>
         {!noMenu ? (
-          <MenuBox px={2} width={[0, 2 / 3, 4 / 6]}>
+          <Box px={2} width={[0, 2 / 3, 4 / 6]}>
             <ul>
               <li>
                 <MenuItem aria-label={linkedin.node.type}>
@@ -116,7 +110,7 @@ function Header(props) {
                 </MenuItem>
               </li>
             </ul>
-          </MenuBox>
+          </Box>
         ) : (
           <></>
         )}

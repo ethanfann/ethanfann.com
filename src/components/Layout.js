@@ -20,10 +20,6 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
-  a {
-    text-decoration: none;
-  }
-
   body, input, select, textarea {
     font-size: 14pt;
     line-height: 1.5;

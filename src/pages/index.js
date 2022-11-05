@@ -105,7 +105,7 @@ const IndexPage = ({ data }) => (
       <Compare edges={data.comparison.edges} />
     </Section>
     <Section id="technologies">
-      <SectionTitle>Favorite Tech</SectionTitle>
+      <SectionTitle>Favorites</SectionTitle>
       <Technologies edges={data.allLogos.edges} />
     </Section>
   </Layout>
