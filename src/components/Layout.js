@@ -1,15 +1,15 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
-import styled, { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
-import styledNormalize from "styled-normalize";
-
 import "typeface-pacifico";
 import "typeface-raleway";
 import "typeface-open-sans";
 
+import { StaticQuery, graphql } from "gatsby";
+import styled, { createGlobalStyle } from "styled-components";
+
+import Helmet from "react-helmet";
 import Navbar from "./Navbar";
+import React from "react";
+import reset from "styled-reset";
+import styledNormalize from "styled-normalize";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -93,7 +93,7 @@ const Layout = ({ children, noMenu }) => (
               name="description"
               content="I am a IT + Software Engineer specializing in providing delightful experiences with technology."
             />
-            <script src="https://cmp-uat.osano.com/1t0AvyuRhBFceA1OUG/7e28edbe-b626-414e-ba2e-4d7e1d6939e1/osano.js"></script>
+            <script src="https://cmp-ci.osano.com/2skdb1YDRiZvJfB1dPK/60eeefc6-efe7-4477-b122-7014417fa090/osano.js"></script>
           </Helmet>
           <Navbar noMenu={noMenu} edges={data.allSocialJson.edges} />
           {children}
