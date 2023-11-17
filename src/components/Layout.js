@@ -93,7 +93,7 @@ const Layout = ({ children, noMenu }) => (
               name="description"
               content="I am a IT + Software Engineer specializing in providing delightful experiences with technology."
             />
-          <script src="https://cmp-ci.osano.com/2skdb1YDRiZvJfB1dPK/60eeefc6-efe7-4477-b122-7014417fa090/osano.js"></script>
+            <script src="https://cmp.osano.com/AzZcrjS8mPcKBOKq/867fe1de-b7c0-4b97-a5bf-0ef6315f5743/osano.js"></script>          
           </Helmet>
           <Navbar noMenu={noMenu} edges={data.allSocialJson.edges} />
           {children}
